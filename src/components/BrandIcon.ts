@@ -120,7 +120,10 @@ export default defineComponent({
         bg: theme.front[0],
         text: 'var(--color-card-foreground)',
       }
-      const label = details.label.split(' ')[0]?.toUpperCase() ?? 'CARD'
+      let label = details.label.split(' ')[0]?.toUpperCase() ?? 'CARD'
+      if (props.brand === 'hipercard') {
+        label = 'HIPER'
+      }
 
       return h('svg', { ...common }, [
         h('rect', { x: 0, y: 0, width: 48, height: 28, rx: 4, fill: style.bg }),
