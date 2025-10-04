@@ -8,7 +8,7 @@
     --color-card-front-mid: theme('colors.card.front-mid');
     --color-card-front-end: theme('colors.card.front-end');
     --color-card-border: theme('colors.card.stripe / 0.15');
-    --color-card-shadow: theme('colors.slate.900 / 0.35');
+    --color-card-shadow: theme('colors.slate.900 / 0.25');
     --color-card-foreground: theme('colors.white');
     --color-card-label: theme('colors.white / 0.65');
     --color-card-accent: theme('colors.card.accent');
@@ -39,6 +39,8 @@
     --color-theme-amex-stripe-2: theme('colors.cardTheme.amex.stripeAlt');
     --color-theme-amex-accent: theme('colors.cardTheme.amex.accent');
     --color-theme-amex-focus: theme('colors.cardTheme.amex.focus');
+    --color-theme-amex-foreground: theme('colors.cardTheme.amex.foreground');
+    --color-theme-amex-label: theme('colors.cardTheme.amex.label');
 
     --color-theme-diners-front-1: theme('colors.cardTheme.diners.primary');
     --color-theme-diners-front-2: theme('colors.cardTheme.diners.secondary');

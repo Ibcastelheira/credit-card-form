@@ -1,10 +1,10 @@
 {
-  "name": "ibat-vue-card-form",
+  "name": "credit-card-form",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit -p tsconfig.json",

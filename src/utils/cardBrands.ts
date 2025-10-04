@@ -18,6 +18,8 @@ export type BrandTheme = {
   accent: string
   stripe?: [string, string]
   accentFocus?: string
+  foreground?: string
+  label?: string
 }
 
 type BrandDetection = {
@@ -46,6 +48,8 @@ const definitions: BrandDetection[] = [
       accent: 'var(--color-theme-amex-accent)',
       stripe: ['var(--color-theme-amex-stripe-1)', 'var(--color-theme-amex-stripe-2)'],
       accentFocus: 'var(--color-theme-amex-focus)',
+      foreground: 'var(--color-theme-amex-foreground)',
+      label: 'var(--color-theme-amex-label)',
     },
   },
   {
@@ -221,6 +225,8 @@ const defaultTheme: BrandTheme = {
   accent: 'var(--color-card-accent)',
   stripe: ['var(--color-card-stripe-strong)', 'var(--color-card-stripe-soft)'],
   accentFocus: 'var(--color-card-accent-focus)',
+  foreground: 'var(--color-card-foreground)',
+  label: 'var(--color-card-label)',
 }
 
 const defaultDetails: BrandDetails = {

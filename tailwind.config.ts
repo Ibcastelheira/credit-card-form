@@ -28,13 +28,15 @@ export default {
         },
         cardTheme: {
           amex: {
-            primary: '#016fd0',
-            secondary: '#1e293b',
-            tertiary: '#0f172a',
-            stripe: '#0f172a',
-            stripeAlt: '#1e293b',
-            accent: '#016fd0',
-            focus: 'rgba(1, 111, 208, 0.55)',
+            primary: '#d7d9dd',
+            secondary: '#afb3b9',
+            tertiary: '#7f848c',
+            stripe: '#4b4f55',
+            stripeAlt: '#90949b',
+            accent: '#2f3338',
+            focus: 'rgba(47, 51, 56, 0.45)',
+            foreground: '#2f3338',
+            label: 'rgba(47, 51, 56, 0.75)',
           },
           diners: {
             primary: '#0f4c75',
