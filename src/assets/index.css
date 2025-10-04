@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-card-front-start: theme('colors.card.front-start');
+    --color-card-front-mid: theme('colors.card.front-mid');
+    --color-card-front-end: theme('colors.card.front-end');
+    --color-card-border: theme('colors.card.stripe / 0.15');
+    --color-card-shadow: theme('colors.slate.900 / 0.35');
+    --color-card-foreground: theme('colors.white');
+    --color-card-label: theme('colors.white / 0.65');
+    --color-card-accent: theme('colors.card.accent');
+    --color-card-accent-focus: theme('colors.card.accent / 0.55');
+    --color-card-stripe-strong: theme('colors.card.stripe / 0.9');
+    --color-card-stripe-soft: theme('colors.card.front-mid / 0.6');
+    --color-card-cvv-surface: theme('colors.card.cvv-surface');
+    --color-card-cvv-text: theme('colors.card.cvv-text');
+    --color-payment-visa: theme('colors.payment.visa');
+    --color-payment-visa-accent: theme('colors.payment.visa-accent');
+    --color-payment-mastercard-bg: theme('colors.payment.mastercard-bg');
+    --color-payment-mastercard-red: theme('colors.payment.mastercard-red');
+    --color-payment-mastercard-orange: theme('colors.payment.mastercard-orange');
+    --color-payment-amex: theme('colors.payment.amex');
+    --color-payment-diners: theme('colors.payment.diners');
+    --color-payment-discover: theme('colors.payment.discover');
+    --color-payment-enroute: theme('colors.payment.enroute');
+    --color-payment-jcb: theme('colors.payment.jcb');
+    --color-payment-voyager: theme('colors.payment.voyager');
+    --color-payment-hipercard: theme('colors.payment.hipercard');
+    --color-payment-aura: theme('colors.payment.aura');
+    --color-payment-fallback: theme('colors.payment.fallback');
+
+    --color-theme-amex-front-1: theme('colors.cardTheme.amex.primary');
+    --color-theme-amex-front-2: theme('colors.cardTheme.amex.secondary');
+    --color-theme-amex-front-3: theme('colors.cardTheme.amex.tertiary');
+    --color-theme-amex-stripe-1: theme('colors.cardTheme.amex.stripe');
+    --color-theme-amex-stripe-2: theme('colors.cardTheme.amex.stripeAlt');
+    --color-theme-amex-accent: theme('colors.cardTheme.amex.accent');
+    --color-theme-amex-focus: theme('colors.cardTheme.amex.focus');
+
+    --color-theme-diners-front-1: theme('colors.cardTheme.diners.primary');
+    --color-theme-diners-front-2: theme('colors.cardTheme.diners.secondary');
+    --color-theme-diners-front-3: theme('colors.cardTheme.diners.tertiary');
+    --color-theme-diners-stripe-1: theme('colors.cardTheme.diners.stripe');
+    --color-theme-diners-stripe-2: theme('colors.cardTheme.diners.stripeAlt');
+    --color-theme-diners-accent: theme('colors.cardTheme.diners.accent');
+    --color-theme-diners-focus: theme('colors.cardTheme.diners.focus');
+
+    --color-theme-enroute-front-1: theme('colors.cardTheme.enroute.primary');
+    --color-theme-enroute-front-2: theme('colors.cardTheme.enroute.secondary');
+    --color-theme-enroute-front-3: theme('colors.cardTheme.enroute.tertiary');
+    --color-theme-enroute-stripe-1: theme('colors.cardTheme.enroute.stripe');
+    --color-theme-enroute-stripe-2: theme('colors.cardTheme.enroute.stripeAlt');
+    --color-theme-enroute-accent: theme('colors.cardTheme.enroute.accent');
+    --color-theme-enroute-focus: theme('colors.cardTheme.enroute.focus');
+
+    --color-theme-hipercard-front-1: theme('colors.cardTheme.hipercard.primary');
+    --color-theme-hipercard-front-2: theme('colors.cardTheme.hipercard.secondary');
+    --color-theme-hipercard-front-3: theme('colors.cardTheme.hipercard.tertiary');
+    --color-theme-hipercard-stripe-1: theme('colors.cardTheme.hipercard.stripe');
+    --color-theme-hipercard-stripe-2: theme('colors.cardTheme.hipercard.stripeAlt');
+    --color-theme-hipercard-accent: theme('colors.cardTheme.hipercard.accent');
+    --color-theme-hipercard-focus: theme('colors.cardTheme.hipercard.focus');
+
+    --color-theme-discover-front-1: theme('colors.cardTheme.discover.primary');
+    --color-theme-discover-front-2: theme('colors.cardTheme.discover.secondary');
+    --color-theme-discover-front-3: theme('colors.cardTheme.discover.tertiary');
+    --color-theme-discover-stripe-1: theme('colors.cardTheme.discover.stripe');
+    --color-theme-discover-stripe-2: theme('colors.cardTheme.discover.stripeAlt');
+    --color-theme-discover-accent: theme('colors.cardTheme.discover.accent');
+    --color-theme-discover-focus: theme('colors.cardTheme.discover.focus');
+
+    --color-theme-jcb-front-1: theme('colors.cardTheme.jcb.primary');
+    --color-theme-jcb-front-2: theme('colors.cardTheme.jcb.secondary');
+    --color-theme-jcb-front-3: theme('colors.cardTheme.jcb.tertiary');
+    --color-theme-jcb-stripe-1: theme('colors.cardTheme.jcb.stripe');
+    --color-theme-jcb-stripe-2: theme('colors.cardTheme.jcb.stripeAlt');
+    --color-theme-jcb-accent: theme('colors.cardTheme.jcb.accent');
+    --color-theme-jcb-focus: theme('colors.cardTheme.jcb.focus');
+
+    --color-theme-voyager-front-1: theme('colors.cardTheme.voyager.primary');
+    --color-theme-voyager-front-2: theme('colors.cardTheme.voyager.secondary');
+    --color-theme-voyager-front-3: theme('colors.cardTheme.voyager.tertiary');
+    --color-theme-voyager-stripe-1: theme('colors.cardTheme.voyager.stripe');
+    --color-theme-voyager-stripe-2: theme('colors.cardTheme.voyager.stripeAlt');
+    --color-theme-voyager-accent: theme('colors.cardTheme.voyager.accent');
+    --color-theme-voyager-focus: theme('colors.cardTheme.voyager.focus');
+
+    --color-theme-aura-front-1: theme('colors.cardTheme.aura.primary');
+    --color-theme-aura-front-2: theme('colors.cardTheme.aura.secondary');
+    --color-theme-aura-front-3: theme('colors.cardTheme.aura.tertiary');
+    --color-theme-aura-stripe-1: theme('colors.cardTheme.aura.stripe');
+    --color-theme-aura-stripe-2: theme('colors.cardTheme.aura.stripeAlt');
+    --color-theme-aura-accent: theme('colors.cardTheme.aura.accent');
+    --color-theme-aura-focus: theme('colors.cardTheme.aura.focus');
+
+    --color-theme-mastercard-front-1: theme('colors.cardTheme.mastercard.primary');
+    --color-theme-mastercard-front-2: theme('colors.cardTheme.mastercard.secondary');
+    --color-theme-mastercard-front-3: theme('colors.cardTheme.mastercard.tertiary');
+    --color-theme-mastercard-stripe-1: theme('colors.cardTheme.mastercard.stripe');
+    --color-theme-mastercard-stripe-2: theme('colors.cardTheme.mastercard.stripeAlt');
+    --color-theme-mastercard-accent: theme('colors.cardTheme.mastercard.accent');
+    --color-theme-mastercard-focus: theme('colors.cardTheme.mastercard.focus');
+
+    --color-theme-visa-front-1: theme('colors.cardTheme.visa.primary');
+    --color-theme-visa-front-2: theme('colors.cardTheme.visa.secondary');
+    --color-theme-visa-front-3: theme('colors.cardTheme.visa.tertiary');
+    --color-theme-visa-stripe-1: theme('colors.cardTheme.visa.stripe');
+    --color-theme-visa-stripe-2: theme('colors.cardTheme.visa.stripeAlt');
+    --color-theme-visa-accent: theme('colors.cardTheme.visa.accent');
+    --color-theme-visa-focus: theme('colors.cardTheme.visa.focus');
+  }
+
+  html,
+  body,
+  #app {
+    height: 100%;
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-800 placeholder-slate-400 shadow-sm outline-none ring-0 transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200;
+  }
+  .label {
+    @apply mb-1 block text-sm font-medium text-slate-700;
+  }
+  .error-text {
+    @apply mt-1 text-xs text-red-600;
+  }
+}
