@@ -107,7 +107,7 @@ const cardStyles = computed<Record<string, string> | undefined>(() => {
     theme.accentFocus ?? (accent.startsWith('#') ? hexToRgba(accent, 0.55) : accent)
   const stripeStrong = theme.stripe?.[0] ?? theme.front[0]
   const stripeSoft = theme.stripe?.[1] ?? theme.front[1]
-  return {
+  const style: Record<string, string> = {
     '--color-card-front-start': theme.front[0],
     '--color-card-front-mid': theme.front[1],
     '--color-card-front-end': theme.front[2],
@@ -116,6 +116,9 @@ const cardStyles = computed<Record<string, string> | undefined>(() => {
     '--color-card-stripe-strong': stripeStrong,
     '--color-card-stripe-soft': stripeSoft,
   }
+  if (theme.foreground) style['--color-card-foreground'] = theme.foreground
+  if (theme.label) style['--color-card-label'] = theme.label
+  return style
 })
 
 const displayNumber = computed(() => {
@@ -161,12 +164,14 @@ function isFocused(key: 'number' | 'name' | 'expiry' | 'cvv') {
     var(--color-card-front-end)
   );
   color: var(--color-card-foreground);
-  box-shadow: 0 20px 35px var(--color-card-shadow);
+  box-shadow:
+    var(--color-card-shadow) 0px 0.0625em 0.0625em,
+    var(--color-card-shadow) 0px 0.125em 0.5em,
+    var(--color-card-shadow) 0px 0px 0px 1px inset;
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid var(--color-card-border);
 }
 
 .card-face--back {

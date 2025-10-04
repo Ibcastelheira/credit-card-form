@@ -7,7 +7,10 @@ const fallbackStyles: Record<CardBrand, { bg: string; text: string }> = {
     bg: 'var(--color-payment-mastercard-bg)',
     text: 'var(--color-card-foreground)',
   },
-  amex: { bg: 'var(--color-payment-amex)', text: 'var(--color-card-foreground)' },
+  amex: {
+    bg: 'var(--color-theme-amex-front-1)',
+    text: 'var(--color-theme-amex-accent)',
+  },
   diners: { bg: 'var(--color-payment-diners)', text: 'var(--color-card-foreground)' },
   discover: { bg: 'var(--color-payment-discover)', text: 'var(--color-card-foreground)' },
   enroute: { bg: 'var(--color-payment-enroute)', text: 'var(--color-card-foreground)' },
@@ -95,14 +98,14 @@ export default defineComponent({
             width: 48,
             height: 28,
             rx: 4,
-            fill: 'var(--color-payment-amex)',
+            fill: 'var(--color-theme-amex-front-1)',
           }),
           h(
             'text',
             {
               x: 24,
               y: 18,
-              fill: 'var(--color-card-foreground)',
+              fill: 'var(--color-theme-amex-accent)',
               'text-anchor': 'middle',
               'font-size': 12,
               'font-weight': '700',
@@ -117,7 +120,10 @@ export default defineComponent({
         bg: theme.front[0],
         text: 'var(--color-card-foreground)',
       }
-      const label = details.label.split(' ')[0]?.toUpperCase() ?? 'CARD'
+      let label = details.label.split(' ')[0]?.toUpperCase() ?? 'CARD'
+      if (props.brand === 'hipercard') {
+        label = 'HIPER'
+      }
 
       return h('svg', { ...common }, [
         h('rect', { x: 0, y: 0, width: 48, height: 28, rx: 4, fill: style.bg }),
